@@ -3,3 +3,5 @@ langchain
 pandas
 cohere
 python-environ
+tabulate
+
