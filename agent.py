@@ -6,11 +6,14 @@ import cohere
 
 # Setting up the api key
 import environ
+import os
 
-env = environ.Env()
-environ.Env.read_env()
-
-API_KEY = env("API_KEY")
+try:
+    env = environ.Env()
+    environ.Env.read_env()
+    API_KEY = env("API_KEY")
+except:
+    API_KEY = os.environ.get("API_KEY")
 
 
 def create_agent(filename):
