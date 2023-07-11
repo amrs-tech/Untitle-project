@@ -28,7 +28,7 @@ def create_agent(filename):
     """
 
     # Create an Cohere object.
-    llm = Cohere(cohere_api_key=API_KEY)
+    llm = Cohere(cohere_api_key=API_KEY, max_tokens=500)
 
     # Read the CSV file into a Pandas DataFrame.
     df = pd.read_csv(filename)
